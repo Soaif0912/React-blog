@@ -51,6 +51,7 @@ import Login_form from './component/inputBox/Login_form.js';
 import UseEffect from './component/useEffect/UseEffect.js';
 import UseEffect_prop from './component/useEffect/useEffect_prop.js'; 
 import UseReducer from './component/useReducer/useReducer.js';
+import UseCallback from './component/useCallback/useCallback.js';
 
 import Loop_Map from './component/Loop_through/loop_map.js';
 import Loop_Object from './component/Loop_through/Loop_object.js';
@@ -512,16 +513,26 @@ import Loop_components from './component/Loop_through/Loop_component.js';
 // export default App;
 
 //-------------- UseReducer ----------------- >
+// const App=()=>{
+
+//   return(
+//     <div className='App'>
+//       <UseReducer/>
+//     </div>
+//   )
+// }
+// export default App;
+
+//-------------- useCallback ----------------- >
 const App=()=>{
 
   return(
     <div className='App'>
-      <UseReducer/>
+      <UseCallback/>
     </div>
   )
 }
 export default App;
-
 
 
 //-------------- Css ----------------- >

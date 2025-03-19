@@ -1,29 +1,36 @@
 
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 
 function HocComponent(){
 
     return(
         <div>
-            <RedComponent cmp={ChildComponent} />
-            <BlueComponent cmp={ChildComponent} />
+            <RedComponent cmp={<ChildComponent/>} />
+            <BlueComponent cmp={<ChildComponent/>} />
         </div>
     )
 }
 export default HocComponent;
 
-function RedComponent(prop){
+function RedComponent({cmp}){
+    useEffect(()=>{
+        console.log('red component is called');
+    });
+
     return(
         <div style={{backgroundColor:'red',height:'100px',width:'150px'}}>
-            <prop.cmp/>
+            {cmp}
         </div>
     )
 }
 
-function BlueComponent(prop){
+function BlueComponent({cmp}){
+    useEffect(()=>{
+        console.log('Blue component is called');
+    });
     return(
         <div style={{backgroundColor:'blue',height:'100px',width:'150px'}}>
-            <prop.cmp/>
+            {cmp}
         </div>
     )
 }
